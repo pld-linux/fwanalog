@@ -12,15 +12,26 @@ URL:		http://tud.at/programm/fwanalog/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-wanalog is a shell script that parses and summarizes firewall
+fwanalog is a shell script that parses and summarizes firewall
 logfiles. It currently (version 0.6.4pre4) understands logs from ipf
 (tested with OpenBSD 2.8's and 2.9's ipf, also FreeBSD, NetBSD and
 Solaris 8 with ipf), OpenBSD 3.x pf, Linux 2.2 ipchains, Linux 2.4
 iptables, some ZyXEL/NetGear routers and (experimentally) Cisco PIX,
-Watchguard Firebox and Firewall-One (not NG!) firewalls. I have tested
-it on Debian GNU/Linux "sid" with bash and OpenBSD 2.8, 2.9 and 3.x
-with ksh as /bin/sh. Other people use it on all kinds of Unix-like
+Watchguard Firebox and Firewall-One (not NG!) firewalls. It was tested
+by author on Debian GNU/Linux "sid" with bash and OpenBSD 2.8, 2.9 and
+3.x with ksh as /bin/sh. Other people use it on all kinds of Unix-like
 platforms.
+
+%description -l pl
+fwanalog to skrypt pow³oki przetwarzaj±cy i podsumowuj±cy pliki logów
+z firewalli. Aktualnie (w wersji 0.6.4pre4) rozumie logi z ipf
+(testowane z ipf w OpenBSD 2.8 i 2.9, a tak¿e FreeBSD, NetBSD i
+Solarisem 8 z ipf), pf z OpenBSD 3.x, ipchains z Linuksa 2.2, iptables
+z Linuksa 2.4, niektórych routerów ZyXEL-a/NetGeara oraz
+(eksperymentalnie) firewalli Cisco PIX, Watchguard Firebox oraz
+Firewall-One (nie NG!). Skrypt by³ testowany przez autora na Debian
+GNU/Linuksie "sid" z bashem oraz OpenBSD 2.8, 2.9 i 3.x z ksh jako
+/bin/sh. Inni u¿ywali go na wszelkich rodzajach platform uniksowych.
 
 %prep
 %setup  -q -n %{name}-%{version}%{pre}
