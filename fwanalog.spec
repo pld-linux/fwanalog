@@ -1,3 +1,5 @@
+# TODO:
+#	- missing files, missing requires
 %define	pre	pre4
 Summary:	firewall logfile analysis program
 Summary(pl):	Analizator logów firewalla
@@ -9,6 +11,7 @@ Group:		Networking/Utilities
 Source0:	http://tud.at/programm/fwanalog/%{name}-%{version}pre4.tar.gz
 # Source0-md5:	6d54ec2aca8280be418640a937a5b5ef
 URL:		http://tud.at/programm/fwanalog/
+Requires:	analog
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -36,12 +39,18 @@ GNU/Linuksie "sid" z bashem oraz OpenBSD 2.8, 2.9 i 3.x z ksh jako
 %prep
 %setup  -q -n %{name}-%{version}%{pre}
 
-%build
-
 %install
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_sysconfdir}/%{name}}
+
+install fwanalog.sh $RPM_BUILD_ROOT%{_bindir}/fwanalog
+install fwanalog.opts.linux24	$RPM_BUILD_ROOT%{_sysconfdir}/%{name}/fwanalog.opts
+install services.conf fwanalog.analog.conf*	$RPM_BUILD_ROOT%{_sysconfdir}/%{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc ChangeLog CONTRIBUTORS README* TODO
+%attr(755,root,root) %{_bindir}/*
+%{_sysconfdir}/%{name}
