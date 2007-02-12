@@ -2,7 +2,7 @@
 #	- missing files, missing requires
 %define	pre	pre4
 Summary:	firewall logfile analysis program
-Summary(pl):	Analizator logÛw firewalla
+Summary(pl.UTF-8):   Analizator log√≥w firewalla
 Name:		fwanalog
 Version:	0.6.4
 Release:	0.%{pre}.1
@@ -25,16 +25,16 @@ by author on Debian GNU/Linux "sid" with bash and OpenBSD 2.8, 2.9 and
 3.x with ksh as /bin/sh. Other people use it on all kinds of Unix-like
 platforms.
 
-%description -l pl
-fwanalog to skrypt pow≥oki przetwarzaj±cy i podsumowuj±cy pliki logÛw
+%description -l pl.UTF-8
+fwanalog to skrypt pow≈Çoki przetwarzajƒÖcy i podsumowujƒÖcy pliki log√≥w
 z firewalli. Aktualnie (w wersji 0.6.4pre4) rozumie logi z ipf
-(testowane z ipf w OpenBSD 2.8 i 2.9, a takøe FreeBSD, NetBSD i
+(testowane z ipf w OpenBSD 2.8 i 2.9, a tak≈ºe FreeBSD, NetBSD i
 Solarisem 8 z ipf), pf z OpenBSD 3.x, ipchains z Linuksa 2.2, iptables
-z Linuksa 2.4, niektÛrych routerÛw ZyXEL-a/NetGeara oraz
+z Linuksa 2.4, niekt√≥rych router√≥w ZyXEL-a/NetGeara oraz
 (eksperymentalnie) firewalli Cisco PIX, Watchguard Firebox oraz
-Firewall-One (nie NG!). Skrypt by≥ testowany przez autora na Debian
+Firewall-One (nie NG!). Skrypt by≈Ç testowany przez autora na Debian
 GNU/Linuksie "sid" z bashem oraz OpenBSD 2.8, 2.9 i 3.x z ksh jako
-/bin/sh. Inni uøywali go na wszelkich rodzajach platform uniksowych.
+/bin/sh. Inni u≈ºywali go na wszelkich rodzajach platform uniksowych.
 
 %prep
 %setup  -q -n %{name}-%{version}%{pre}
