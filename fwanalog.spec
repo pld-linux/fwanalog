@@ -2,7 +2,7 @@
 #	- missing files, missing requires
 %define	pre	pre4
 Summary:	firewall logfile analysis program
-Summary(pl.UTF-8):   Analizator logów firewalla
+Summary(pl.UTF-8):	Analizator logów firewalla
 Name:		fwanalog
 Version:	0.6.4
 Release:	0.%{pre}.1
