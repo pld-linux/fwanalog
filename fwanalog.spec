@@ -40,6 +40,7 @@ GNU/Linuksie "sid" z bashem oraz OpenBSD 2.8, 2.9 i 3.x z ksh jako
 %setup  -q -n %{name}-%{version}%{pre}
 
 %install
+rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_sysconfdir}/%{name}}
 
 install fwanalog.sh $RPM_BUILD_ROOT%{_bindir}/fwanalog
